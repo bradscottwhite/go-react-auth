@@ -4,6 +4,7 @@ const Nav = ({ name, setName }: { name: string, setName: (name: string) => void 
   const logout = async () => {
     await fetch(`${import.meta.env.VITE_SERVER}/api/register`, {
       method: 'POST',
+      mode: 'no-cors',
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'access-control-allow-origin, access-control-allow-headers',
