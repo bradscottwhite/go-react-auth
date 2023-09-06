@@ -32,7 +32,7 @@ const App = () => {
 
         <main className='form-signin'>
           <Routes>
-            <Route path='/' exact element={<Home name={name} />} />
+            <Route path='/' element={<Home name={name} />} />
             <Route path='/login' element={<Login setName={setName} />} />
             <Route path='/register' element={<Register />} />
           </Routes>
