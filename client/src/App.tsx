@@ -32,9 +32,9 @@ const App = () => {
 
         <main className='form-signin'>
           <Routes>
-            <Route path='/' element={<Home name={name} />} />
-            <Route path='/login' element={<Login setName={setName} />} />
-            <Route path='/register' element={<Register />} />
+            <Route path='/go-react-auth/' element={<Home name={name} />} />
+            <Route path='/go-react-auth/login' element={<Login setName={setName} />} />
+            <Route path='/go-react-auth/register' element={<Register />} />
           </Routes>
         </main>
       </BrowserRouter>
