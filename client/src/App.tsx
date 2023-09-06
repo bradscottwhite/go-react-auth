@@ -10,22 +10,20 @@ const App = () => {
   const [name, setName] = useState('');
 
   useEffect(() => {
-    (
-      async () => {
-        const res = await fetch(`${import.meta.env.VITE_SERVER}/api/user`, {
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': 'access-control-allow-origin, access-control-allow-headers',
-            'Content-Type': 'application/json'
-          },
-          credentials: 'include',
-        });
+    (async () => {
+      const res = await fetch(`${import.meta.env.VITE_SERVER}/api/user`, {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': 'access-control-allow-origin, access-control-allow-headers',
+          'Content-Type': 'application/json'
+        },
+        credentials: 'include',
+      });
 
-        const content = await res.json();
+      const content = await res.json();
 
-        setName(content.name);
-      }
-    )();
+      setName(content.name);
+    })();
   }, []);
 
 

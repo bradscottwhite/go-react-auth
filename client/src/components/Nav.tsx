@@ -9,7 +9,7 @@ const Nav = ({ name, setName }: { name: string, setName: (name: string) => void 
         'Access-Control-Allow-Headers': 'access-control-allow-origin, access-control-allow-headers',
         'Content-Type': 'application/json'
       },
-      credentials: 'include',
+      //credentials: 'include',
     });
 
     setName('');

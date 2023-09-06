@@ -24,9 +24,9 @@ func main() {
 	app := fiber.New()
 
 	app.Use(cors.New(cors.Config{
-        AllowHeaders:     "Content-Type,access-control-allow-origin, access-control-allow-headers",
-        AllowOrigins:     os.Getenv("SITE_URL"),
-		AllowCredentials: true,
+        AllowHeaders:     "Content-Type, access-control-allow-origin, access-control-allow-headers, Origin, Accept",
+		AllowOrigins:     "*",//"https://github.io",
+		//AllowCredentials: true,
 	}))
 
 	routes.Setup(app)
