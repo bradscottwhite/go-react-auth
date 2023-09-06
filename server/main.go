@@ -25,7 +25,7 @@ func main() {
 
 	app.Use(cors.New(cors.Config{
         AllowHeaders:     "Content-Type,access-control-allow-origin, access-control-allow-headers",
-        AllowOrigins:     "https://bradscottwhite.github.io",
+        AllowOrigins:     os.Getenv("SITE_URL"),
 		AllowCredentials: true,
 	}))
 
