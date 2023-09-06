@@ -28,7 +28,7 @@ const Register = () => {
   }
 
   if (redirect) {
-    return <Navigate to='/login'/>;
+    return <Navigate to='/go-react-auth/login'/>;
   }
 
   return (

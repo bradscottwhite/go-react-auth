@@ -21,10 +21,10 @@ const Nav = ({ name, setName }: { name: string, setName: (name: string) => void 
     menu = (
       <ul className='navbar-nav me-auto mb-2 mb-md-0'>
         <li className='nav-item active'>
-          <Link to='/login' className='nav-link'>Login</Link>
+          <Link to='/go-react-auth/login' className='nav-link'>Login</Link>
         </li>
         <li className='nav-item active'>
-          <Link to='/register' className='nav-link'>Register</Link>
+          <Link to='/go-react-auth/register' className='nav-link'>Register</Link>
         </li>
       </ul>
     )
@@ -32,7 +32,7 @@ const Nav = ({ name, setName }: { name: string, setName: (name: string) => void 
     menu = (
       <ul className='navbar-nav me-auto mb-2 mb-md-0'>
         <li className='nav-item active'>
-          <Link to='/login' className='nav-link' onClick={logout}>Logout</Link>
+          <Link to='/go-react-auth/login' className='nav-link' onClick={logout}>Logout</Link>
         </li>
       </ul>
     )
@@ -41,7 +41,7 @@ const Nav = ({ name, setName }: { name: string, setName: (name: string) => void 
   return (
     <nav className='navbar navbar-expand-md navbar-dark bg-dark mb-4'>
       <div className='container-fluid'>
-        <Link to='/' className='navbar-brand'>Home</Link>
+        <Link to='/go-react-auth' className='navbar-brand'>Home</Link>
 
         <div>
           {menu}
