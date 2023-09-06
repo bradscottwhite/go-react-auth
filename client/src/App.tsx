@@ -12,12 +12,16 @@ const App = () => {
   useEffect(() => {
     (
       async () => {
-        const response = await fetch(`${import.meta.env.VITE_SERVER}/api/user`, {
-          headers: { 'Content-Type': 'application/json' },
+        const res = await fetch(`${import.meta.env.VITE_SERVER}/api/user`, {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'access-control-allow-origin, access-control-allow-headers',
+            'Content-Type': 'application/json'
+          },
           credentials: 'include',
         });
 
-        const content = await response.json();
+        const content = await res.json();
 
         setName(content.name);
       }
