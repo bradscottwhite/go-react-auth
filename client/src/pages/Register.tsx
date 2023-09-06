@@ -12,7 +12,11 @@ const Register = () => {
 
     await fetch(`${import.meta.env.VITE_SERVER}/api/register`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'access-control-allow-origin, access-control-allow-headers',
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         name,
         email,

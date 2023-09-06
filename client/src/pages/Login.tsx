@@ -9,9 +9,13 @@ const Login = ({ setName }: { setName: (name: string) => void }) => {
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    const response = await fetch(`${import.meta.env.VITE_SERVER}/api/login`, {
+    const res = await fetch(`${import.meta.env.VITE_SERVER}/api/login`, {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'access-control-allow-origin, access-control-allow-headers',
+        'Content-Type': 'application/json'
+      },
       credentials: 'include',
       body: JSON.stringify({
         email,
@@ -19,7 +23,7 @@ const Login = ({ setName }: { setName: (name: string) => void }) => {
       })
     });
 
-    const content = await response.json();
+    const content = await res.json();
 
     setRedirect(true);
     setName(content.name);
